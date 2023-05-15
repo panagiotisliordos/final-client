@@ -1,38 +1,359 @@
-.App {
-  text-align: center;
+/*.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+    font-size: 24px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+    background-color: rgb(27, 25, 25);
+    color: white;
+    padding: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    margin-right: 10px;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-button {
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-menu {
+        margin-top: 10px;
+    }
+
+    .navbar-item {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}
+
+.home-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.songs-list {
+    list-style: none;
+    padding: 0;
+}
+
+.song-item {
+    margin-bottom: 20px;
+}
+
+.add-song-button {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.add-song-button:hover {
+    background-color: #c0392b;
+}
+
+.add-song-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.btn-primary {
+    background-color: #4c4e50;
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #3f4143;
+}
+
+.btn-primary:active {
+    background-color: #313334;
+}
+
+.btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(56, 60, 62, 0.5);
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-submit-button {
+    background-color: #313234;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-submit-button:hover {
+    background-color: #3d4042;
+}
+
+.form-submit-button:active {
+    background-color: #36393b;
+}
+
+.form-submit-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(56, 59, 61, 0.5);
+}
+
+.error-message {
+    color: #ff5252;
+    margin-top: 10px;
+}*/
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.container a {
+    color: #000;
+    text-decoration: none;
+}
+
+.container a:hover {
+    color: #777;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    margin-right: 10px;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-button {
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+    }
+
+    .navbar-menu {
+        margin-top: 10px;
+    }
+
+    .navbar-item {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .navbar-menu li {
+        margin-bottom: 10px;
+    }
+}
+
+.home-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.songs-list {
+    list-style: none;
+    padding: 0;
+}
+
+.song-item {
+    margin-bottom: 20px;
+}
+
+.add-song-button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.add-song-button:hover {
+    background-color: #222;
+}
+
+.add-song-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #000;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.btn-primary {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #222;
+}
+
+.btn-primary:active {
+    background-color: #444;
+}
+
+.btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+.error-message {
+    color: #ff0000;
+    margin-top: 10px;
+}
+.song-item {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.song-item:hover {
+    background-color: #eaeaea;
 }
