@@ -102,7 +102,7 @@ function SignupPage() {
 
         console.log("Selected image file:", image);
         authService
-            // .signup(requestBody)
+
             .signup(formData)
             .then((response) => {
                 // Handle successful signup

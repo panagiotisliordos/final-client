@@ -67,6 +67,8 @@ const SongsHomePage = () => {
     return (
         <div className="home-page">
             <div className="logo-container">
+                <h1 className="page-title">Kasetophono</h1>
+
                 <img
                     src="/img/kaset.jpg"
                     alt="Kasetophono Logo"
@@ -79,15 +81,16 @@ const SongsHomePage = () => {
                     }}
                 />
             </div>
-            <h1>Kasetophono</h1>
 
-            <h2>Songs:</h2>
+            <h1>Songs:</h1>
             <ul className="songs-list">
                 {songs.map((song) => (
                     <li key={song._id} className="song-item">
                         <h3>{song.title}</h3>
                         <p>Artist: {song.artist}</p>
-                        {/* <p>YouTube Link: {song.youtubeLink}</p>*/}
+                        <div className="song-image">
+                            <img src={song.imageUrl} alt={song.title} />
+                        </div>
                         <p>
                             YouTube Link:{" "}
                             <a
@@ -98,8 +101,8 @@ const SongsHomePage = () => {
                                 {song.youtubeLink}
                             </a>
                         </p>
-                        <p>{song.imageUrl}</p>
-                        {/* Add more song details here */}
+
+                        {/*<img src={song.imageUrl} alt={song.title} />*/}
                     </li>
                 ))}
             </ul>

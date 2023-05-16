@@ -39,7 +39,7 @@ const AddSong = () => {
         api.uploadImage(imageUrl)
             .then((response) => {
                 console.log("Upload Image Response:", response); // Add this line
-                const imageUrl = response; // Assign the response directly to imageUrl
+                const imageUrl = response.imageUrl; // Assign the response directly to imageUrl
                 const newSong = {
                     title,
                     artist,
@@ -64,58 +64,73 @@ const AddSong = () => {
     };
 
     return (
-        <div className="add-song-container">
-            <h2>New Song</h2>
-            <form onSubmit={handleFormSubmit}>
-                <div className="form-group">
-                    <label>Title:</label>
-                    <input
-                        type="text"
-                        value={title}
-                        onChange={(event) => setTitle(event.target.value)}
-                        required
-                        className="form-control"
-                    />
-                </div>
+        <>
+            <div className="add-song-container">
+                <h2>New Song</h2>
+                <form onSubmit={handleFormSubmit}>
+                    <div className="form-group">
+                        <label>Title:</label>
+                        <input
+                            type="text"
+                            value={title}
+                            onChange={(event) => setTitle(event.target.value)}
+                            required
+                            className="form-control"
+                        />
+                    </div>
 
-                <div className="form-group">
-                    <label>Artist:</label>
-                    <input
-                        type="text"
-                        value={artist}
-                        onChange={(event) => setArtist(event.target.value)}
-                        required
-                        className="form-control"
-                    />
-                </div>
+                    <div className="form-group">
+                        <label>Artist:</label>
+                        <input
+                            type="text"
+                            value={artist}
+                            onChange={(event) => setArtist(event.target.value)}
+                            required
+                            className="form-control"
+                        />
+                    </div>
 
-                <div className="form-group">
-                    <label>Image:</label>
-                    <input
-                        type="file"
-                        accept="image/*"
-                        onChange={handleFileUpload}
-                        required
-                        className="form-control"
-                    />
-                </div>
+                    <div className="form-group">
+                        <label>Image:</label>
+                        <input
+                            type="file"
+                            accept="image/*"
+                            onChange={handleFileUpload}
+                            required
+                            className="form-control"
+                        />
+                    </div>
 
-                <div className="form-group">
-                    <label>YouTube Link:</label>
-                    <input
-                        type="text"
-                        value={youtubeLink}
-                        onChange={(event) => setYoutubeLink(event.target.value)}
-                        required
-                        className="form-control"
-                    />
-                </div>
+                    <div className="form-group">
+                        <label>YouTube Link:</label>
+                        <input
+                            type="text"
+                            value={youtubeLink}
+                            onChange={(event) =>
+                                setYoutubeLink(event.target.value)
+                            }
+                            required
+                            className="form-control"
+                        />
+                    </div>
 
-                <button type="submit" className="btn btn-primary">
-                    Save new song
-                </button>
-            </form>
-        </div>
+                    <button type="submit" className="btn btn-primary">
+                        Save new song
+                    </button>
+                </form>
+                <img
+                    src="/img/notes.jpeg"
+                    alt="Notes Logo"
+                    className="logo-img"
+                    style={{
+                        width: "100%",
+                        height: "auto",
+                        maxWidth: "400px", // Adjust the maximum width as per your preference
+                        margin: "0 auto",
+                    }}
+                />
+            </div>
+        </>
     );
 };
 

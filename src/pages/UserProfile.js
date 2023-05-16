@@ -1,32 +1,46 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useContext, useEffect, useState } from "react";
+import axios, { Axios } from "axios";
 import { Link } from "react-router-dom";
+import authService from "./../services/auth.service";
+import { AuthContext } from "../context/auth.context";
 const API_URL = "http://localhost:5005";
+
 const UserProfile = () => {
-    const [user, setUser] = useState(null);
+    const { user, token } = useContext(AuthContext);
+    //console.log(user._id);
+    console.log(token);
+    const [currentUser, setCurrentUser] = useState(user);
+    console.log(currentUser._id);
 
     useEffect(() => {
-        // Fetch user data from the backend when the component mounts
-        axios
-            .get(`${API_URL}/api/user`) // Replace '/api/user' with the appropriate backend route
+        authService
+            .get(`api/user/${user._id}`)
+            //.get(`api/user/:id`) // Replace '/api/user' with the appropriate backend route
             .then((response) => {
-                setUser(response.data);
+                setCurrentUser(response.data);
+                console.log(response.data);
             })
             .catch((error) => {
                 console.error("Error fetching user data:", error);
             });
-    }, []);
+    }, [user]);
 
     if (!user) {
         return <div>Loading...</div>;
     }
 
     return (
-        <div>
+        /*<div className="user-profile">
             <h2>User Profile</h2>
+            <img src={user.imageUrl} alt={user.name} />
             <p>Email: {user.email}</p>
             <p>Name: {user.name}</p>
-            {/* Display other user information as desired */}
+        </div>*/
+        <div className="user-profile">
+            <h2>User Profile</h2>
+            <img src={currentUser.imageUrl} alt={user.name} />
+            <p className="email-label">Email: {currentUser.email}</p>
+            <p className="name-label">Name: {currentUser.name}</p>
         </div>
     );
 };

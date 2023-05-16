@@ -1,194 +1,10 @@
-/*.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.title {
-    font-size: 24px;
-}
-
-.navbar {
-    background-color: rgb(27, 25, 25);
-    color: white;
-    padding: 10px;
-}
-
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-}
-
-.navbar-menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar-item {
-    margin-right: 10px;
-}
-
-.navbar-link {
-    text-decoration: none;
-    color: white;
-}
-
-.navbar-button {
-    background-color: grey;
-    border: none;
-    color: white;
-    padding: 8px 16px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 20px;
-}
-
-@media (max-width: 768px) {
-    .navbar-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar-menu {
-        margin-top: 10px;
-    }
-
-    .navbar-item {
-        margin-right: 0;
-        margin-bottom: 5px;
-    }
-}
-
-.home-page {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.songs-list {
-    list-style: none;
-    padding: 0;
-}
-
-.song-item {
-    margin-bottom: 20px;
-}
-
-.add-song-button {
-    padding: 10px 20px;
-    background-color: #e74c3c;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.add-song-button:hover {
-    background-color: #c0392b;
-}
-
-.add-song-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-control {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.btn {
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 20px;
-}
-
-.btn-primary {
-    background-color: #4c4e50;
-    color: #fff;
-    border: none;
-}
-
-.btn-primary:hover {
-    background-color: #3f4143;
-}
-
-.btn-primary:active {
-    background-color: #313334;
-}
-
-.btn-primary:focus {
-    outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(56, 60, 62, 0.5);
-}
-
-.form-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.form-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.form-submit-button {
-    background-color: #313234;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.form-submit-button:hover {
-    background-color: #3d4042;
-}
-
-.form-submit-button:active {
-    background-color: #36393b;
-}
-
-.form-submit-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(56, 59, 61, 0.5);
-}
-
-.error-message {
-    color: #ff5252;
-    margin-top: 10px;
-}*/
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #e9e9e9;
 }
+
 .container a {
     color: #000;
     text-decoration: none;
@@ -203,7 +19,7 @@ label {
 }
 
 .navbar {
-    background-color: black;
+    background-color: #000;
     color: white;
     padding: 10px;
 }
@@ -238,7 +54,7 @@ label {
 }
 
 .navbar-button {
-    background-color: grey;
+    background-color: #777;
     border: none;
     color: white;
     padding: 8px 16px;
@@ -270,6 +86,7 @@ label {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
 }
 
 .songs-list {
@@ -279,25 +96,56 @@ label {
 
 .song-item {
     margin-bottom: 20px;
+    background-color: #747272;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/*.song-item:hover {
+    background-color: #bcb0b0;
+}*/
+
 .add-song-button {
-    padding: 10px 20px;
+    padding: 20px 40px;
     background-color: #000;
     color: #fff;
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
 }
 
 .add-song-button:hover {
-    background-color: #222;
+    background-color: #625f5f;
+}
+
+.page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    justify-content: center;
+    color: #000;
+}
+
+.song-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.song-image img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 8px;
 }
 
 .add-song-container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
+    /*background-color: #e9e9e9;*/
 }
 
 .form-group {
@@ -346,14 +194,37 @@ label {
     color: #ff0000;
     margin-top: 10px;
 }
-.song-item {
-    background-color: #f5f5f5;
+
+.user-profile {
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #e9e9e9;
+}
+
+.user-profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 20px;
 }
 
-.song-item:hover {
-    background-color: #eaeaea;
+.user-profile h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.user-profile p {
+    margin-bottom: 20px;
+}
+
+.user-profile .email-label {
+    font-weight: bold;
+}
+
+.user-profile .name-label {
+    font-style: italic;
+    color: #272323;
 }

@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    useNavigate,
+} from "react-router-dom";
 //import "App.css"; // Import the CSS file
 //import { useContext } from "react";
 import React, { useContext } from "react";
@@ -7,9 +12,10 @@ import { AuthContext } from "../context/auth.context";
 
 const NavBar = () => {
     const { isLoggedIn, logOutUser } = useContext(AuthContext);
-
+    const navigate = useNavigate();
     const handleLogout = () => {
         logOutUser();
+        navigate("/");
     };
 
     return (

@@ -13,7 +13,7 @@ class AuthService {
         this.api.interceptors.request.use((config) => {
             // Retrieve the JWT token from the local storage
             const storedToken = localStorage.getItem("authToken");
-
+            console.log(storedToken);
             if (storedToken) {
                 config.headers = { Authorization: `Bearer ${storedToken}` };
             }
@@ -38,6 +38,15 @@ class AuthService {
         return this.api.get("/auth/verify");
         // same as
         // return axios.post("http://localhost:5005/auth/verify");
+    };
+
+    get = (url) => {
+        return this.api.get("/" + url);
+        // same as
+        // return axios.post("http://localhost:5005/auth/verify");
+    };
+    getInformation = () => {
+        return this.api.get("/api/user.routes");
     };
 }
 
