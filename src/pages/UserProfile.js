@@ -14,7 +14,7 @@ const UserProfile = () => {
 
     useEffect(() => {
         authService
-            .get(`api/user/${user._id}`)
+            .get(`user/${user._id}`)
             //.get(`api/user/:id`) // Replace '/api/user' with the appropriate backend route
             .then((response) => {
                 setCurrentUser(response.data);
