@@ -37,13 +37,15 @@ const NavBar = () => {
                                     Profile
                                 </Link>
                             </li>
+
                             <li className="navbar-item">
-                                <button
+                                <Link
+                                    to="/"
+                                    className="navbar-link"
                                     onClick={handleLogout}
-                                    className="navbar-button"
                                 >
                                     Logout
-                                </button>
+                                </Link>
                             </li>
                         </>
                     ) : (

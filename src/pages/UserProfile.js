@@ -11,6 +11,7 @@ const UserProfile = () => {
     console.log(token);
     const [currentUser, setCurrentUser] = useState(user);
     console.log(currentUser._id);
+    const [randomVideo, setRandomVideo] = useState(null);
 
     useEffect(() => {
         authService
@@ -39,8 +40,9 @@ const UserProfile = () => {
         <div className="user-profile">
             <h2>User Profile</h2>
             <img src={currentUser.imageUrl} alt={user.name} />
-            <p className="email-label">Email: {currentUser.email}</p>
+
             <p className="name-label">Name: {currentUser.name}</p>
+            <p className="email-label">Email: {currentUser.email}</p>
         </div>
     );
 };

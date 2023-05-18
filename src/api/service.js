@@ -36,8 +36,16 @@ const uploadImage = (file) => {
         .catch(errorHandler);
 };
 
+const getUsers = () => {
+    return api
+        .get("/users")
+        .then((res) => res.data)
+        .catch(errorHandler);
+};
+
 export default {
     getSongs,
     createSong,
     uploadImage,
+    getUsers,
 };

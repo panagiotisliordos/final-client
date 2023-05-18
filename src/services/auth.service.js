@@ -20,7 +20,11 @@ class AuthService {
             return config;
         });
     }
-
+    getToken = () => {
+        // Retrieve the JWT token from the local storage
+        const storedToken = localStorage.getItem("authToken");
+        return storedToken;
+    };
     login = (requestBody) => {
         return this.api.post("/auth/login", requestBody);
         // same as
